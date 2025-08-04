@@ -1,6 +1,6 @@
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from config import TOKEN
-from handlers import start,helpi,echo,contact,photo,vedio,voice,audio,sticker,stop,location
+from handlers import start,helpi,echo,contact,photo,vedio,voice,audio,sticker,stop,location,dice
 
   
 
@@ -22,6 +22,7 @@ def main()->None:
     dispatcher.add_handler(MessageHandler(Filters.video,vedio))
     dispatcher.add_handler(MessageHandler(Filters.voice,voice))
     dispatcher.add_handler(MessageHandler(Filters.audio,audio))
+    dispatcher.add_handler(MessageHandler(Filters.dice,dice))
     dispatcher.add_handler(MessageHandler(Filters.sticker,sticker))
     dispatcher.add_handler(MessageHandler(Filters.location,location))
 
